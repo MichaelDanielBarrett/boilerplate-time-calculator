@@ -7,6 +7,8 @@ def add_time(start, duration, weekday_start = 'blank'):
     # Extract and define the variables
     
     start_hour = int(start.split(':')[0])
+    if start_hour == 12:
+        start_hour = 0
     start_minute = start.split(':')[1]
     start_minute = int(start_minute.split()[0])
     start_meridiem = start.split()[1]
